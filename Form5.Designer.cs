@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtSkapaAnvändarnamn = new System.Windows.Forms.TextBox();
+            this.txtSkapaLösenord = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnRegistreraHär = new System.Windows.Forms.Button();
@@ -46,19 +46,19 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Registrera konto";
             // 
-            // textBox1
+            // txtSkapaAnvändarnamn
             // 
-            this.textBox1.Location = new System.Drawing.Point(226, 143);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(175, 22);
-            this.textBox1.TabIndex = 1;
+            this.txtSkapaAnvändarnamn.Location = new System.Drawing.Point(226, 143);
+            this.txtSkapaAnvändarnamn.Name = "txtSkapaAnvändarnamn";
+            this.txtSkapaAnvändarnamn.Size = new System.Drawing.Size(175, 22);
+            this.txtSkapaAnvändarnamn.TabIndex = 1;
             // 
-            // textBox2
+            // txtSkapaLösenord
             // 
-            this.textBox2.Location = new System.Drawing.Point(226, 241);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(140, 22);
-            this.textBox2.TabIndex = 2;
+            this.txtSkapaLösenord.Location = new System.Drawing.Point(226, 241);
+            this.txtSkapaLösenord.Name = "txtSkapaLösenord";
+            this.txtSkapaLösenord.Size = new System.Drawing.Size(140, 22);
+            this.txtSkapaLösenord.TabIndex = 2;
             // 
             // label2
             // 
@@ -98,8 +98,8 @@
             this.Controls.Add(this.btnRegistreraHär);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtSkapaLösenord);
+            this.Controls.Add(this.txtSkapaAnvändarnamn);
             this.Controls.Add(this.label1);
             this.Name = "Form5";
             this.Text = "Form5";
@@ -111,8 +111,8 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtSkapaAnvändarnamn;
+        private System.Windows.Forms.TextBox txtSkapaLösenord;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnRegistreraHär;

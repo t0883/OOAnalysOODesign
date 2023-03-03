@@ -34,10 +34,10 @@
             this.biljettprisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loggaInToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.regitreraKontoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbHållplats1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cbHållplats2 = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -97,17 +97,17 @@
             this.regitreraKontoToolStripMenuItem.Size = new System.Drawing.Size(119, 24);
             this.regitreraKontoToolStripMenuItem.Text = "Regitrera konto";
             // 
-            // comboBox1
+            // cbHållplats1
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbHållplats1.FormattingEnabled = true;
+            this.cbHållplats1.Items.AddRange(new object[] {
             "Göteborgs Central",
             "Kungsbacka",
             "Kungälv"});
-            this.comboBox1.Location = new System.Drawing.Point(130, 195);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 1;
+            this.cbHållplats1.Location = new System.Drawing.Point(130, 195);
+            this.cbHållplats1.Name = "cbHållplats1";
+            this.cbHållplats1.Size = new System.Drawing.Size(121, 24);
+            this.cbHållplats1.TabIndex = 1;
             // 
             // label1
             // 
@@ -129,27 +129,27 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Res till:";
             // 
-            // comboBox2
+            // cbHållplats2
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.cbHållplats2.FormattingEnabled = true;
+            this.cbHållplats2.Items.AddRange(new object[] {
             "Göteborgs Central",
             "Kungsbacka",
             "Kungälv"});
-            this.comboBox2.Location = new System.Drawing.Point(414, 195);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 24);
-            this.comboBox2.TabIndex = 4;
+            this.cbHållplats2.Location = new System.Drawing.Point(414, 195);
+            this.cbHållplats2.Name = "cbHållplats2";
+            this.cbHållplats2.Size = new System.Drawing.Size(121, 24);
+            this.cbHållplats2.TabIndex = 4;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 554);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.cbHållplats2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbHållplats1);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
@@ -171,10 +171,10 @@
         private System.Windows.Forms.ToolStripMenuItem biljettprisToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem loggaInToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem regitreraKontoToolStripMenuItem;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbHållplats1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cbHållplats2;
     }
 }
 

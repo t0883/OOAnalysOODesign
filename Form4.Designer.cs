@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtAnvändarnamn = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtLösenord = new System.Windows.Forms.TextBox();
             this.btnLoggaIn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -46,12 +46,12 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Logga in";
             // 
-            // textBox1
+            // txtAnvändarnamn
             // 
-            this.textBox1.Location = new System.Drawing.Point(84, 133);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(169, 22);
-            this.textBox1.TabIndex = 1;
+            this.txtAnvändarnamn.Location = new System.Drawing.Point(84, 133);
+            this.txtAnvändarnamn.Name = "txtAnvändarnamn";
+            this.txtAnvändarnamn.Size = new System.Drawing.Size(169, 22);
+            this.txtAnvändarnamn.TabIndex = 1;
             // 
             // label2
             // 
@@ -73,12 +73,12 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "Lösenord";
             // 
-            // textBox2
+            // txtLösenord
             // 
-            this.textBox2.Location = new System.Drawing.Point(336, 133);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(169, 22);
-            this.textBox2.TabIndex = 4;
+            this.txtLösenord.Location = new System.Drawing.Point(336, 133);
+            this.txtLösenord.Name = "txtLösenord";
+            this.txtLösenord.Size = new System.Drawing.Size(169, 22);
+            this.txtLösenord.TabIndex = 4;
             // 
             // btnLoggaIn
             // 
@@ -96,10 +96,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnLoggaIn);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtLösenord);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtAnvändarnamn);
             this.Controls.Add(this.label1);
             this.Name = "Form4";
             this.Text = "Form4";
@@ -111,10 +111,10 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtAnvändarnamn;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtLösenord;
         private System.Windows.Forms.Button btnLoggaIn;
     }
 }
