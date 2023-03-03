@@ -34,6 +34,10 @@
             this.biljettprisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loggaInToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.regitreraKontoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -46,7 +50,7 @@
             this.tableLayoutPanel1.Controls.Add(this.menuStrip1, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(694, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -63,43 +67,91 @@
             this.biljettprisToolStripMenuItem,
             this.loggaInToolStripMenuItem,
             this.regitreraKontoToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(239, 0);
+            this.menuStrip1.Location = new System.Drawing.Point(241, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(134, 277);
+            this.menuStrip1.Size = new System.Drawing.Size(132, 277);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // tidtabelToolStripMenuItem
             // 
             this.tidtabelToolStripMenuItem.Name = "tidtabelToolStripMenuItem";
-            this.tidtabelToolStripMenuItem.Size = new System.Drawing.Size(117, 24);
+            this.tidtabelToolStripMenuItem.Size = new System.Drawing.Size(119, 24);
             this.tidtabelToolStripMenuItem.Text = "Tidtabel";
             // 
             // biljettprisToolStripMenuItem
             // 
             this.biljettprisToolStripMenuItem.Name = "biljettprisToolStripMenuItem";
-            this.biljettprisToolStripMenuItem.Size = new System.Drawing.Size(117, 24);
+            this.biljettprisToolStripMenuItem.Size = new System.Drawing.Size(119, 24);
             this.biljettprisToolStripMenuItem.Text = "Biljettpris";
             // 
             // loggaInToolStripMenuItem
             // 
             this.loggaInToolStripMenuItem.Name = "loggaInToolStripMenuItem";
-            this.loggaInToolStripMenuItem.Size = new System.Drawing.Size(117, 24);
+            this.loggaInToolStripMenuItem.Size = new System.Drawing.Size(119, 24);
             this.loggaInToolStripMenuItem.Text = "Logga in";
             // 
             // regitreraKontoToolStripMenuItem
             // 
             this.regitreraKontoToolStripMenuItem.Name = "regitreraKontoToolStripMenuItem";
-            this.regitreraKontoToolStripMenuItem.Size = new System.Drawing.Size(117, 24);
+            this.regitreraKontoToolStripMenuItem.Size = new System.Drawing.Size(119, 24);
             this.regitreraKontoToolStripMenuItem.Text = "Regitrera konto";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Göteborgs Central",
+            "Kungsbacka",
+            "Kungälv"});
+            this.comboBox1.Location = new System.Drawing.Point(130, 195);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 24);
+            this.comboBox1.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(126, 172);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(78, 20);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Res från:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(410, 172);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(66, 20);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Res till:";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Göteborgs Central",
+            "Kungsbacka",
+            "Kungälv"});
+            this.comboBox2.Location = new System.Drawing.Point(414, 195);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(121, 24);
+            this.comboBox2.TabIndex = 4;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -107,6 +159,7 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -118,6 +171,10 @@
         private System.Windows.Forms.ToolStripMenuItem biljettprisToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem loggaInToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem regitreraKontoToolStripMenuItem;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox comboBox2;
     }
 }
 
