@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOAnalysOODesign", "OOAnalysOODesign.csproj", "{04FAA597-AB77-4649-8F35-663EBAC5259C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{04FAA597-AB77-4649-8F35-663EBAC5259C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04FAA597-AB77-4649-8F35-663EBAC5259C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04FAA597-AB77-4649-8F35-663EBAC5259C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04FAA597-AB77-4649-8F35-663EBAC5259C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CF14001E-AA22-4E20-88AA-D09CDA909F3D}
+	EndGlobalSection
+EndGlobal
