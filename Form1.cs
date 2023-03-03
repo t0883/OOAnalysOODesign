@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,25 @@ namespace OOAnalysOODesign
 {
     public partial class Form1 : Form
     {
+        MySqlConnection conn;
+
+        private ComboBox[] comboBoxes;
+
         public Form1()
         {
             InitializeComponent();
+
+            //Skapa en MySQL connection objekt
+            string server = "localhost";
+            string database = "bussappDB";
+            string user = "root";
+            string password = "!Phuglife9835";
+
+            string connString = $"SERVER={server};DATABASE={database};UID={user};PASSWORD={password};";
+
+            conn = new MySqlConnection(connString);
+
+            comboBoxes = new ComboBox[] { cbHållplats1, cbHållplats2 };
         }
 
         private void tidtabelToolStripMenuItem_Click(object sender, EventArgs e)
@@ -43,6 +60,38 @@ namespace OOAnalysOODesign
             Form5 form5 = new Form5();
 
             form5.Show();
+        }
+
+        private void getStopsfromDB()
+        {
+            string sqlQuery = "SELECT * FROM bussappdb.hållplatser;";
+
+            MySqlCommand cmd = new MySqlCommand(sqlQuery, conn);
+
+            try
+            {
+                conn.Open();
+
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                
+                    while (reader.Read())
+                    {
+                        cbHållplats1.Items.Add((string)reader["Hållplatsnamn"]);
+                        cbHållplats2.Items.Add((string)reader["Hållplatsnamn"]);
+                    }
+
+                conn.Close();
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            getStopsfromDB();
         }
     }
 }
