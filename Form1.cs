@@ -90,7 +90,7 @@ namespace OOAnalysOODesign
 
                         Hållplats.hållplatser.Add(new Hållplats(hållplatsnamn, hållplatszon));
 
-                        MessageBox.Show($"{hållplatsnamn} {hållplatszon}");
+                        //MessageBox.Show($"{hållplatsnamn} {hållplatszon}");
                     }
 
                 conn.Close();
@@ -119,9 +119,9 @@ namespace OOAnalysOODesign
                     ZonB = reader.GetInt32(2);
                     ZonC = reader.GetInt32(3);
 
-                    lblZonAPris.Text = $"{ZonA.ToString()} kr";
-                    lblZonBPris.Text = $"{ZonB.ToString()} kr";
-                    lblZonCPris.Text = $"{ZonC.ToString()} kr";
+                    lblZonAPris.Text = $"{ZonA} kr";
+                    lblZonBPris.Text = $"{ZonB} kr";
+                    lblZonCPris.Text = $"{ZonC} kr";
 
                 }
                 
@@ -150,11 +150,26 @@ namespace OOAnalysOODesign
                 if(hållplater.hållplatsNamn == lblStartHållplats.Text)
                 {
                     lblStartZon.Text = hållplater.hållplatsZon;
+
+                    if (lblStartZon.Text == "A")
+                    {
+                        lblZonPrisStart.Text = ZonA.ToString();
+                    }
+                    if (lblStartZon.Text == "B")
+                    {
+                        lblZonPrisStart.Text = ZonB.ToString();
+                    }
+                    if (lblStartZon.Text == "C")
+                    {
+                        lblZonPrisStart.Text = ZonC.ToString();
+                    }
                 }
             }
 
             lblStartZonfast.Show();
             lblStartZon.Show();
+            lblStartPris.Show();
+            lblZonPrisStart.Show();
 
         }
 
@@ -168,11 +183,28 @@ namespace OOAnalysOODesign
                 if (hållplatser.hållplatsNamn == lblSlutHållplats.Text)
                 {
                     lblSlutZon.Text = hållplatser.hållplatsZon;
+
+                    if(lblSlutZon.Text == "A")
+                    {
+                        lblZonPrisSlut.Text = ZonA.ToString();
+                    }
+                    if (lblSlutZon.Text == "B")
+                    {
+                        lblZonPrisSlut.Text = ZonB.ToString();
+                    }
+                    if (lblSlutZon.Text == "C")
+                    {
+                        lblZonPrisSlut.Text = ZonC.ToString();
+                    }
                 }
             }
 
             lblSlutZonfast.Show();
             lblSlutZon.Show();
+            lblSlutPris.Show();
+            lblZonPrisSlut.Show();
+
+
         }
     }
 }
