@@ -111,9 +111,9 @@ namespace OOAnalysOODesign
                     ZonB = reader.GetInt32(2);
                     ZonC = reader.GetInt32(3);
 
-                    lblZonAPris.Text = ZonA.ToString();
-                    lblZonBPris.Text = ZonB.ToString();
-                    lblZonCPris.Text = ZonC.ToString();
+                    lblZonAPris.Text = $"{ZonA.ToString()} kr";
+                    lblZonBPris.Text = $"{ZonB.ToString()} kr";
+                    lblZonCPris.Text = $"{ZonC.ToString()} kr";
 
 
                 }

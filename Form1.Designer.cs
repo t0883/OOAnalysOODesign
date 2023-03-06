@@ -114,7 +114,7 @@
             // 
             this.cbHållplats1.FormattingEnabled = true;
             this.cbHållplats1.Location = new System.Drawing.Point(98, 158);
-            this.cbHållplats1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbHållplats1.Margin = new System.Windows.Forms.Padding(2);
             this.cbHållplats1.Name = "cbHållplats1";
             this.cbHållplats1.Size = new System.Drawing.Size(125, 21);
             this.cbHållplats1.TabIndex = 1;
@@ -146,7 +146,7 @@
             // 
             this.cbHållplats2.FormattingEnabled = true;
             this.cbHållplats2.Location = new System.Drawing.Point(310, 158);
-            this.cbHållplats2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbHållplats2.Margin = new System.Windows.Forms.Padding(2);
             this.cbHållplats2.Name = "cbHållplats2";
             this.cbHållplats2.Size = new System.Drawing.Size(127, 21);
             this.cbHållplats2.TabIndex = 4;
@@ -155,9 +155,10 @@
             // lblStartHållplats
             // 
             this.lblStartHållplats.AutoSize = true;
+            this.lblStartHållplats.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStartHållplats.Location = new System.Drawing.Point(97, 211);
             this.lblStartHållplats.Name = "lblStartHållplats";
-            this.lblStartHållplats.Size = new System.Drawing.Size(132, 13);
+            this.lblStartHållplats.Size = new System.Drawing.Size(165, 16);
             this.lblStartHållplats.TabIndex = 5;
             this.lblStartHållplats.Text = "Den valda start hållplatsen";
             this.lblStartHållplats.Visible = false;
@@ -165,9 +166,10 @@
             // lblSlutHållplats
             // 
             this.lblSlutHållplats.AutoSize = true;
+            this.lblSlutHållplats.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSlutHållplats.Location = new System.Drawing.Point(305, 211);
             this.lblSlutHållplats.Name = "lblSlutHållplats";
-            this.lblSlutHållplats.Size = new System.Drawing.Size(128, 13);
+            this.lblSlutHållplats.Size = new System.Drawing.Size(160, 16);
             this.lblSlutHållplats.TabIndex = 5;
             this.lblSlutHållplats.Text = "Den valda slut hållplatsen";
             this.lblSlutHållplats.Visible = false;
