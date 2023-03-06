@@ -115,7 +115,6 @@ namespace OOAnalysOODesign
                     lblZonBPris.Text = $"{ZonB.ToString()} kr";
                     lblZonCPris.Text = $"{ZonC.ToString()} kr";
 
-
                 }
                 
                 conn.Close();
