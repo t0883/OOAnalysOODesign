@@ -83,6 +83,14 @@ namespace OOAnalysOODesign
                     {
                         cbHållplats1.Items.Add((string)reader["Hållplatsnamn"]);
                         cbHållplats2.Items.Add((string)reader["Hållplatsnamn"]);
+
+                        string hållplatsnamn = reader.GetString(1);
+                        string hållplatszon = reader.GetString(2);
+
+
+                        Hållplats.hållplatser.Add(new Hållplats(hållplatsnamn, hållplatszon));
+
+                        MessageBox.Show($"{hållplatsnamn} {hållplatszon}");
                     }
 
                 conn.Close();
@@ -136,12 +144,35 @@ namespace OOAnalysOODesign
         {
             lblStartHållplats.Text = cbHållplats1.SelectedItem.ToString();
             lblStartHållplats.Show();
+
+            foreach (Hållplats hållplater in Hållplats.hållplatser)
+            {
+                if(hållplater.hållplatsNamn == lblStartHållplats.Text)
+                {
+                    lblStartZon.Text = hållplater.hållplatsZon;
+                }
+            }
+
+            lblStartZonfast.Show();
+            lblStartZon.Show();
+
         }
 
         private void cbHållplats2_SelectedIndexChanged(object sender, EventArgs e)
         {
             lblSlutHållplats.Text = cbHållplats2.SelectedItem.ToString();
             lblSlutHållplats.Show();
+
+            foreach (Hållplats hållplatser in Hållplats.hållplatser)
+            {
+                if (hållplatser.hållplatsNamn == lblSlutHållplats.Text)
+                {
+                    lblSlutZon.Text = hållplatser.hållplatsZon;
+                }
+            }
+
+            lblSlutZonfast.Show();
+            lblSlutZon.Show();
         }
     }
 }

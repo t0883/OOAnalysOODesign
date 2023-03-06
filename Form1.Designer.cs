@@ -49,6 +49,10 @@
             this.lblZonBPris = new System.Windows.Forms.Label();
             this.lblZonCPris = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.lblStartZon = new System.Windows.Forms.Label();
+            this.lblSlutZon = new System.Windows.Forms.Label();
+            this.lblStartZonfast = new System.Windows.Forms.Label();
+            this.lblSlutZonfast = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -158,7 +162,7 @@
             // 
             this.lblStartHållplats.AutoSize = true;
             this.lblStartHållplats.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStartHållplats.Location = new System.Drawing.Point(45, 196);
+            this.lblStartHållplats.Location = new System.Drawing.Point(42, 196);
             this.lblStartHållplats.Name = "lblStartHållplats";
             this.lblStartHållplats.Size = new System.Drawing.Size(334, 31);
             this.lblStartHållplats.TabIndex = 5;
@@ -169,7 +173,7 @@
             // 
             this.lblSlutHållplats.AutoSize = true;
             this.lblSlutHållplats.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSlutHållplats.Location = new System.Drawing.Point(303, 196);
+            this.lblSlutHållplats.Location = new System.Drawing.Point(304, 196);
             this.lblSlutHållplats.Name = "lblSlutHållplats";
             this.lblSlutHållplats.Size = new System.Drawing.Size(323, 31);
             this.lblSlutHållplats.TabIndex = 5;
@@ -256,12 +260,58 @@
             this.label7.TabIndex = 6;
             this.label7.Text = "BUSSAB";
             // 
+            // lblStartZon
+            // 
+            this.lblStartZon.AutoSize = true;
+            this.lblStartZon.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStartZon.Location = new System.Drawing.Point(124, 246);
+            this.lblStartZon.Name = "lblStartZon";
+            this.lblStartZon.Size = new System.Drawing.Size(72, 31);
+            this.lblStartZon.TabIndex = 7;
+            this.lblStartZon.Text = "ZON";
+            this.lblStartZon.Visible = false;
+            // 
+            // lblSlutZon
+            // 
+            this.lblSlutZon.AutoSize = true;
+            this.lblSlutZon.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSlutZon.Location = new System.Drawing.Point(388, 249);
+            this.lblSlutZon.Name = "lblSlutZon";
+            this.lblSlutZon.Size = new System.Drawing.Size(72, 31);
+            this.lblSlutZon.TabIndex = 7;
+            this.lblSlutZon.Text = "ZON";
+            this.lblSlutZon.Visible = false;
+            // 
+            // lblStartZonfast
+            // 
+            this.lblStartZonfast.AutoSize = true;
+            this.lblStartZonfast.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStartZonfast.Location = new System.Drawing.Point(42, 246);
+            this.lblStartZonfast.Name = "lblStartZonfast";
+            this.lblStartZonfast.Size = new System.Drawing.Size(76, 31);
+            this.lblStartZonfast.TabIndex = 5;
+            this.lblStartZonfast.Text = "Zon: ";
+            this.lblStartZonfast.Visible = false;
+            // 
+            // lblSlutZonfast
+            // 
+            this.lblSlutZonfast.AutoSize = true;
+            this.lblSlutZonfast.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSlutZonfast.Location = new System.Drawing.Point(306, 249);
+            this.lblSlutZonfast.Name = "lblSlutZonfast";
+            this.lblSlutZonfast.Size = new System.Drawing.Size(76, 31);
+            this.lblSlutZonfast.TabIndex = 5;
+            this.lblSlutZonfast.Text = "Zon: ";
+            this.lblSlutZonfast.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(191)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblSlutZon);
+            this.Controls.Add(this.lblStartZon);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.lblSlutHållplats);
             this.Controls.Add(this.lblZonCPris);
@@ -271,6 +321,8 @@
             this.Controls.Add(this.lblZonAPris);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblSlutZonfast);
+            this.Controls.Add(this.lblStartZonfast);
             this.Controls.Add(this.lblStartHållplats);
             this.Controls.Add(this.cbHållplats2);
             this.Controls.Add(this.label2);
@@ -312,6 +364,10 @@
         private System.Windows.Forms.Label lblZonBPris;
         private System.Windows.Forms.Label lblZonCPris;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblStartZon;
+        private System.Windows.Forms.Label lblSlutZon;
+        private System.Windows.Forms.Label lblStartZonfast;
+        private System.Windows.Forms.Label lblSlutZonfast;
     }
 }
 
