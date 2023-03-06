@@ -171,6 +171,8 @@ namespace OOAnalysOODesign
             lblStartPris.Show();
             lblZonPrisStart.Show();
 
+            checkOut();
+
         }
 
         private void cbHållplats2_SelectedIndexChanged(object sender, EventArgs e)
@@ -204,7 +206,31 @@ namespace OOAnalysOODesign
             lblSlutPris.Show();
             lblZonPrisSlut.Show();
 
+            checkOut();
 
         }
+
+        private void checkOut()
+        {
+            if (lblSlutPris.Visible == true && lblStartPris.Visible == true)
+            {
+                int pris1 = Convert.ToInt32(lblZonPrisStart.Text);
+                int pris2 = Convert.ToInt32(lblZonPrisSlut.Text);
+
+                if(pris1 == pris2)
+                {
+                    lblTotalPris.Text = $"{pris1}";
+                }
+                else { lblTotalPris.Text = $"{pris1 + pris2}"; }
+
+                
+
+
+
+                lblBiljettpris.Show();
+                lblTotalPris.Show();
+            }
+        }
+
     }
 }

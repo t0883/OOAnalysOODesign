@@ -57,6 +57,8 @@
             this.lblSlutPris = new System.Windows.Forms.Label();
             this.lblZonPrisStart = new System.Windows.Forms.Label();
             this.lblZonPrisSlut = new System.Windows.Forms.Label();
+            this.lblBiljettpris = new System.Windows.Forms.Label();
+            this.lblTotalPris = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -350,6 +352,28 @@
             this.lblZonPrisSlut.TabIndex = 7;
             this.lblZonPrisSlut.Visible = false;
             // 
+            // lblBiljettpris
+            // 
+            this.lblBiljettpris.AutoSize = true;
+            this.lblBiljettpris.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBiljettpris.Location = new System.Drawing.Point(42, 358);
+            this.lblBiljettpris.Name = "lblBiljettpris";
+            this.lblBiljettpris.Size = new System.Drawing.Size(247, 31);
+            this.lblBiljettpris.TabIndex = 5;
+            this.lblBiljettpris.Text = "Biljettpris för resan:";
+            this.lblBiljettpris.Visible = false;
+            // 
+            // lblTotalPris
+            // 
+            this.lblTotalPris.AutoSize = true;
+            this.lblTotalPris.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalPris.Location = new System.Drawing.Point(306, 358);
+            this.lblTotalPris.Name = "lblTotalPris";
+            this.lblTotalPris.Size = new System.Drawing.Size(78, 31);
+            this.lblTotalPris.TabIndex = 7;
+            this.lblTotalPris.Text = "PRIS";
+            this.lblTotalPris.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -358,6 +382,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.lblZonPrisSlut);
             this.Controls.Add(this.lblSlutZon);
+            this.Controls.Add(this.lblTotalPris);
             this.Controls.Add(this.lblStartZon);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.lblSlutHållplats);
@@ -373,6 +398,7 @@
             this.Controls.Add(this.lblZonPrisStart);
             this.Controls.Add(this.lblStartPris);
             this.Controls.Add(this.lblStartZonfast);
+            this.Controls.Add(this.lblBiljettpris);
             this.Controls.Add(this.lblStartHållplats);
             this.Controls.Add(this.cbHållplats2);
             this.Controls.Add(this.label2);
@@ -422,6 +448,8 @@
         private System.Windows.Forms.Label lblSlutPris;
         private System.Windows.Forms.Label lblZonPrisStart;
         private System.Windows.Forms.Label lblZonPrisSlut;
+        private System.Windows.Forms.Label lblBiljettpris;
+        private System.Windows.Forms.Label lblTotalPris;
     }
 }
 
