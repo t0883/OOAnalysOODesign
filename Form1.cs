@@ -17,6 +17,10 @@ namespace OOAnalysOODesign
 
         private ComboBox[] comboBoxes;
 
+        int ZonA;
+        int ZonB;
+        int ZonC;
+
         public Form1()
         {
             InitializeComponent();
@@ -89,9 +93,56 @@ namespace OOAnalysOODesign
             }
         }
 
+        private void getPriceFromDB()
+        {
+            string sqlQuery = "SELECT * FROM bussappdb.pristabell;";
+
+            MySqlCommand cmd = new MySqlCommand(sqlQuery, conn);
+
+            try
+            {
+                conn.Open();
+
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    ZonA = reader.GetInt32(1);
+                    ZonB = reader.GetInt32(2);
+                    ZonC = reader.GetInt32(3);
+
+                    lblZonAPris.Text = ZonA.ToString();
+                    lblZonBPris.Text = ZonB.ToString();
+                    lblZonCPris.Text = ZonC.ToString();
+
+
+                }
+                
+                conn.Close();
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
             getStopsfromDB();
+            getPriceFromDB();
+        }
+
+        private void cbHållplats1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            lblStartHållplats.Text = cbHållplats1.SelectedItem.ToString();
+            lblStartHållplats.Show();
+        }
+
+        private void cbHållplats2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            lblSlutHållplats.Text = cbHållplats2.SelectedItem.ToString();
+            lblSlutHållplats.Show();
         }
     }
 }
