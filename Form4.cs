@@ -16,5 +16,12 @@ namespace OOAnalysOODesign
         {
             InitializeComponent();
         }
+
+        private void btnLoggaIn_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Du är nu inloggad.");
+            txtLösenord.Clear();
+            txtAnvändarnamn.Clear();
+        }
     }
 }

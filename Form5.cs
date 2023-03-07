@@ -16,5 +16,12 @@ namespace OOAnalysOODesign
         {
             InitializeComponent();
         }
+
+        private void btnRegistreraHär_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Ditt konto har registrerats.");
+            txtSkapaAnvändarnamn.Clear();
+            txtSkapaLösenord.Clear();
+        }
     }
 }

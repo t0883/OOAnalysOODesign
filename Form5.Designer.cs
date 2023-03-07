@@ -51,7 +51,7 @@
             // txtSkapaAnvändarnamn
             // 
             this.txtSkapaAnvändarnamn.Location = new System.Drawing.Point(77, 110);
-            this.txtSkapaAnvändarnamn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSkapaAnvändarnamn.Margin = new System.Windows.Forms.Padding(2);
             this.txtSkapaAnvändarnamn.Name = "txtSkapaAnvändarnamn";
             this.txtSkapaAnvändarnamn.Size = new System.Drawing.Size(132, 20);
             this.txtSkapaAnvändarnamn.TabIndex = 1;
@@ -59,8 +59,9 @@
             // txtSkapaLösenord
             // 
             this.txtSkapaLösenord.Location = new System.Drawing.Point(77, 190);
-            this.txtSkapaLösenord.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSkapaLösenord.Margin = new System.Windows.Forms.Padding(2);
             this.txtSkapaLösenord.Name = "txtSkapaLösenord";
+            this.txtSkapaLösenord.PasswordChar = '*';
             this.txtSkapaLösenord.Size = new System.Drawing.Size(106, 20);
             this.txtSkapaLösenord.TabIndex = 2;
             // 
@@ -90,12 +91,13 @@
             // 
             this.btnRegistreraHär.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistreraHär.Location = new System.Drawing.Point(459, 282);
-            this.btnRegistreraHär.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRegistreraHär.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegistreraHär.Name = "btnRegistreraHär";
             this.btnRegistreraHär.Size = new System.Drawing.Size(96, 52);
             this.btnRegistreraHär.TabIndex = 5;
             this.btnRegistreraHär.Text = "Registrera här";
             this.btnRegistreraHär.UseVisualStyleBackColor = true;
+            this.btnRegistreraHär.Click += new System.EventHandler(this.btnRegistreraHär_Click);
             // 
             // Form5
             // 
@@ -110,9 +112,9 @@
             this.Controls.Add(this.txtSkapaAnvändarnamn);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form5";
-            this.Text = "Form5";
+            this.Text = "Registrera konto";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -59,6 +59,10 @@
             this.lblZonPrisSlut = new System.Windows.Forms.Label();
             this.lblBiljettpris = new System.Windows.Forms.Label();
             this.lblTotalPris = new System.Windows.Forms.Label();
+            this.btnKöp = new System.Windows.Forms.Button();
+            this.lblStartValuta = new System.Windows.Forms.Label();
+            this.lblSlutValuta = new System.Windows.Forms.Label();
+            this.lblTotalValuta = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -338,8 +342,9 @@
             this.lblZonPrisStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblZonPrisStart.Location = new System.Drawing.Point(124, 305);
             this.lblZonPrisStart.Name = "lblZonPrisStart";
-            this.lblZonPrisStart.Size = new System.Drawing.Size(0, 31);
+            this.lblZonPrisStart.Size = new System.Drawing.Size(78, 31);
             this.lblZonPrisStart.TabIndex = 5;
+            this.lblZonPrisStart.Text = "PRIS";
             this.lblZonPrisStart.Visible = false;
             // 
             // lblZonPrisSlut
@@ -348,8 +353,9 @@
             this.lblZonPrisSlut.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblZonPrisSlut.Location = new System.Drawing.Point(388, 305);
             this.lblZonPrisSlut.Name = "lblZonPrisSlut";
-            this.lblZonPrisSlut.Size = new System.Drawing.Size(0, 31);
+            this.lblZonPrisSlut.Size = new System.Drawing.Size(78, 31);
             this.lblZonPrisSlut.TabIndex = 7;
+            this.lblZonPrisSlut.Text = "PRIS";
             this.lblZonPrisSlut.Visible = false;
             // 
             // lblBiljettpris
@@ -374,12 +380,57 @@
             this.lblTotalPris.Text = "PRIS";
             this.lblTotalPris.Visible = false;
             // 
+            // btnKöp
+            // 
+            this.btnKöp.Location = new System.Drawing.Point(513, 347);
+            this.btnKöp.Name = "btnKöp";
+            this.btnKöp.Size = new System.Drawing.Size(123, 42);
+            this.btnKöp.TabIndex = 8;
+            this.btnKöp.Text = "Bekräfta köp";
+            this.btnKöp.UseVisualStyleBackColor = true;
+            this.btnKöp.Visible = false;
+            this.btnKöp.Click += new System.EventHandler(this.btnKöp_Click);
+            // 
+            // lblStartValuta
+            // 
+            this.lblStartValuta.AutoSize = true;
+            this.lblStartValuta.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStartValuta.Location = new System.Drawing.Point(208, 305);
+            this.lblStartValuta.Name = "lblStartValuta";
+            this.lblStartValuta.Size = new System.Drawing.Size(41, 31);
+            this.lblStartValuta.TabIndex = 5;
+            this.lblStartValuta.Text = "Kr";
+            this.lblStartValuta.Visible = false;
+            // 
+            // lblSlutValuta
+            // 
+            this.lblSlutValuta.AutoSize = true;
+            this.lblSlutValuta.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSlutValuta.Location = new System.Drawing.Point(472, 305);
+            this.lblSlutValuta.Name = "lblSlutValuta";
+            this.lblSlutValuta.Size = new System.Drawing.Size(41, 31);
+            this.lblSlutValuta.TabIndex = 5;
+            this.lblSlutValuta.Text = "Kr";
+            this.lblSlutValuta.Visible = false;
+            // 
+            // lblTotalValuta
+            // 
+            this.lblTotalValuta.AutoSize = true;
+            this.lblTotalValuta.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalValuta.Location = new System.Drawing.Point(396, 358);
+            this.lblTotalValuta.Name = "lblTotalValuta";
+            this.lblTotalValuta.Size = new System.Drawing.Size(41, 31);
+            this.lblTotalValuta.TabIndex = 5;
+            this.lblTotalValuta.Text = "Kr";
+            this.lblTotalValuta.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(191)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnKöp);
             this.Controls.Add(this.lblZonPrisSlut);
             this.Controls.Add(this.lblSlutZon);
             this.Controls.Add(this.lblTotalPris);
@@ -395,6 +446,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblSlutPris);
             this.Controls.Add(this.lblSlutZonfast);
+            this.Controls.Add(this.lblTotalValuta);
+            this.Controls.Add(this.lblSlutValuta);
+            this.Controls.Add(this.lblStartValuta);
             this.Controls.Add(this.lblZonPrisStart);
             this.Controls.Add(this.lblStartPris);
             this.Controls.Add(this.lblStartZonfast);
@@ -450,6 +504,10 @@
         private System.Windows.Forms.Label lblZonPrisSlut;
         private System.Windows.Forms.Label lblBiljettpris;
         private System.Windows.Forms.Label lblTotalPris;
+        private System.Windows.Forms.Button btnKöp;
+        private System.Windows.Forms.Label lblStartValuta;
+        private System.Windows.Forms.Label lblSlutValuta;
+        private System.Windows.Forms.Label lblTotalValuta;
     }
 }
 

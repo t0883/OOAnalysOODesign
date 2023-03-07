@@ -153,15 +153,21 @@ namespace OOAnalysOODesign
 
                     if (lblStartZon.Text == "A")
                     {
-                        lblZonPrisStart.Text = ZonA.ToString();
+                        string pris = ZonA.ToString();
+
+                        lblZonPrisStart.Text = $"{pris}";
                     }
                     if (lblStartZon.Text == "B")
                     {
-                        lblZonPrisStart.Text = ZonB.ToString();
+                        string pris = ZonB.ToString();
+
+                        lblZonPrisStart.Text = $"{pris}";
                     }
                     if (lblStartZon.Text == "C")
                     {
-                        lblZonPrisStart.Text = ZonC.ToString();
+                        string pris = ZonC.ToString();
+
+                        lblZonPrisStart.Text = $"{pris}";
                     }
                 }
             }
@@ -170,6 +176,7 @@ namespace OOAnalysOODesign
             lblStartZon.Show();
             lblStartPris.Show();
             lblZonPrisStart.Show();
+            lblStartValuta.Show();
 
             checkOut();
 
@@ -188,15 +195,22 @@ namespace OOAnalysOODesign
 
                     if(lblSlutZon.Text == "A")
                     {
-                        lblZonPrisSlut.Text = ZonA.ToString();
+                        string pris = ZonA.ToString();
+
+                        lblZonPrisSlut.Text = $"{pris}";
+
                     }
                     if (lblSlutZon.Text == "B")
                     {
-                        lblZonPrisSlut.Text = ZonB.ToString();
+                        string pris = ZonB.ToString();
+
+                        lblZonPrisSlut.Text = $"{pris}";
                     }
                     if (lblSlutZon.Text == "C")
                     {
-                        lblZonPrisSlut.Text = ZonC.ToString();
+                        string pris = ZonC.ToString();
+
+                        lblZonPrisSlut.Text = $"{pris}";
                     }
                 }
             }
@@ -205,6 +219,7 @@ namespace OOAnalysOODesign
             lblSlutZon.Show();
             lblSlutPris.Show();
             lblZonPrisSlut.Show();
+            lblSlutValuta.Show();
 
             checkOut();
 
@@ -226,11 +241,18 @@ namespace OOAnalysOODesign
                 
 
 
-
+                btnKöp.Show();
                 lblBiljettpris.Show();
                 lblTotalPris.Show();
+                lblTotalValuta.Show();
             }
         }
 
+        private void btnKöp_Click(object sender, EventArgs e)
+        {
+
+            string pris = lblTotalPris.Text;
+            MessageBox.Show($"Köpet har genomförts. {pris} kr har dragits från ditt konto.");
+        }
     }
 }

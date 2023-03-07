@@ -51,7 +51,7 @@
             // txtAnvändarnamn
             // 
             this.txtAnvändarnamn.Location = new System.Drawing.Point(63, 108);
-            this.txtAnvändarnamn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtAnvändarnamn.Margin = new System.Windows.Forms.Padding(2);
             this.txtAnvändarnamn.Name = "txtAnvändarnamn";
             this.txtAnvändarnamn.Size = new System.Drawing.Size(128, 20);
             this.txtAnvändarnamn.TabIndex = 1;
@@ -81,8 +81,9 @@
             // txtLösenord
             // 
             this.txtLösenord.Location = new System.Drawing.Point(63, 182);
-            this.txtLösenord.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtLösenord.Margin = new System.Windows.Forms.Padding(2);
             this.txtLösenord.Name = "txtLösenord";
+            this.txtLösenord.PasswordChar = '*';
             this.txtLösenord.Size = new System.Drawing.Size(128, 20);
             this.txtLösenord.TabIndex = 4;
             // 
@@ -90,12 +91,13 @@
             // 
             this.btnLoggaIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLoggaIn.Location = new System.Drawing.Point(464, 281);
-            this.btnLoggaIn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLoggaIn.Margin = new System.Windows.Forms.Padding(2);
             this.btnLoggaIn.Name = "btnLoggaIn";
             this.btnLoggaIn.Size = new System.Drawing.Size(83, 51);
             this.btnLoggaIn.TabIndex = 5;
             this.btnLoggaIn.Text = "Logga in";
             this.btnLoggaIn.UseVisualStyleBackColor = true;
+            this.btnLoggaIn.Click += new System.EventHandler(this.btnLoggaIn_Click);
             // 
             // Form4
             // 
@@ -110,7 +112,7 @@
             this.Controls.Add(this.txtAnvändarnamn);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form4";
             this.Text = "Logga In";
             this.ResumeLayout(false);
