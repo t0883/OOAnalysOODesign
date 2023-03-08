@@ -29,7 +29,7 @@ namespace OOAnalysOODesign
             string server = "localhost";
             string database = "bussappDB";
             string user = "root";
-            string password = "!Phuglife9835";
+            string password = "";
 
             string connString = $"SERVER={server};DATABASE={database};UID={user};PASSWORD={password};";
 
