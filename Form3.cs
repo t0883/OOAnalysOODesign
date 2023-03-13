@@ -29,7 +29,7 @@ namespace OOAnalysOODesign
             string server = "localhost";
             string database = "bussappDB";
             string user = "root";
-            string password = "!Phuglife9835";
+            string password = "EttSuperHemligtLösenord123!";
 
             string connString = $"SERVER={server};DATABASE={database};UID={user};PASSWORD={password};";
 
@@ -38,6 +38,8 @@ namespace OOAnalysOODesign
 
         private void Form3_Load(object sender, EventArgs e)
         {
+            // Hämtar prisen från databasen
+
             getPriceFromDB();
         }
 
@@ -59,13 +61,13 @@ namespace OOAnalysOODesign
                     ZonBpris = reader.GetInt32(2);
                     ZonCpris = reader.GetInt32(3);
 
-                    lblZonApris.Text = $"{ZonApris.ToString()} kr";
-                    lblZonBpris.Text = $"{ZonBpris.ToString()} kr";
-                    lblZonCpris.Text = $"{ZonCpris.ToString()} kr";
+                    lblZonApris.Text = $"{ZonApris} kr";
+                    lblZonBpris.Text = $"{ZonBpris} kr";
+                    lblZonCpris.Text = $"{ZonCpris} kr";
 
-                    lblZonABpris.Text = $"{(ZonApris + ZonBpris).ToString()} kr";
-                    lblZonBCpris.Text = $"{(ZonBpris + ZonCpris).ToString()} kr";
-                    lblZonACpris.Text = $"{(ZonApris + ZonCpris).ToString()} kr";
+                    lblZonABpris.Text = $"{(ZonApris + ZonBpris)} kr";
+                    lblZonBCpris.Text = $"{(ZonBpris + ZonCpris)} kr";
+                    lblZonACpris.Text = $"{(ZonApris + ZonCpris)} kr";
 
 
                 }

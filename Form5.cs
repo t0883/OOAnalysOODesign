@@ -12,16 +12,48 @@ namespace OOAnalysOODesign
 {
     public partial class Form5 : Form
     {
+        TextBox[] txtBoxes;
+
         public Form5()
         {
             InitializeComponent();
+
+            txtBoxes = new TextBox[] { txtSkapaAnvändarnamn, txtSkapaLösenord };
         }
 
         private void btnRegistreraHär_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Ditt konto har registrerats.");
-            txtSkapaAnvändarnamn.Clear();
-            txtSkapaLösenord.Clear();
+            bool valid = true;
+
+            foreach (TextBox box in txtBoxes)
+            {
+                box.Text = box.Text.Trim();
+
+                if(box.Text == "")
+                {
+                    valid = false;
+
+                    box.BackColor = Color.Red;
+
+                }
+            }
+
+            if(!valid)
+            {
+                MessageBox.Show("Vänligen fyll i ett korrekt användarnamn och lösenord!");
+                return;
+            }
+                MessageBox.Show("Ditt konto har registrerats.");
+
+
+            foreach (TextBox box in txtBoxes)
+            {
+                box.Clear();
+                box.BackColor = Color.White;
+            }
+                
+                
         }
+
     }
 }

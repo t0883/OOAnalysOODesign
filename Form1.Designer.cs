@@ -63,6 +63,7 @@
             this.lblStartValuta = new System.Windows.Forms.Label();
             this.lblSlutValuta = new System.Windows.Forms.Label();
             this.lblTotalValuta = new System.Windows.Forms.Label();
+            this.uppdateraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -90,7 +91,8 @@
             this.tidtabelToolStripMenuItem,
             this.biljettprisToolStripMenuItem,
             this.loggaInToolStripMenuItem,
-            this.regitreraKontoToolStripMenuItem});
+            this.regitreraKontoToolStripMenuItem,
+            this.uppdateraToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
@@ -101,28 +103,28 @@
             // tidtabelToolStripMenuItem
             // 
             this.tidtabelToolStripMenuItem.Name = "tidtabelToolStripMenuItem";
-            this.tidtabelToolStripMenuItem.Size = new System.Drawing.Size(95, 19);
+            this.tidtabelToolStripMenuItem.Size = new System.Drawing.Size(115, 19);
             this.tidtabelToolStripMenuItem.Text = "Tidtabel";
             this.tidtabelToolStripMenuItem.Click += new System.EventHandler(this.tidtabelToolStripMenuItem_Click);
             // 
             // biljettprisToolStripMenuItem
             // 
             this.biljettprisToolStripMenuItem.Name = "biljettprisToolStripMenuItem";
-            this.biljettprisToolStripMenuItem.Size = new System.Drawing.Size(95, 19);
+            this.biljettprisToolStripMenuItem.Size = new System.Drawing.Size(115, 19);
             this.biljettprisToolStripMenuItem.Text = "Biljettpris";
             this.biljettprisToolStripMenuItem.Click += new System.EventHandler(this.biljettprisToolStripMenuItem_Click);
             // 
             // loggaInToolStripMenuItem
             // 
             this.loggaInToolStripMenuItem.Name = "loggaInToolStripMenuItem";
-            this.loggaInToolStripMenuItem.Size = new System.Drawing.Size(95, 19);
+            this.loggaInToolStripMenuItem.Size = new System.Drawing.Size(115, 19);
             this.loggaInToolStripMenuItem.Text = "Logga in";
             this.loggaInToolStripMenuItem.Click += new System.EventHandler(this.loggaInToolStripMenuItem_Click);
             // 
             // regitreraKontoToolStripMenuItem
             // 
             this.regitreraKontoToolStripMenuItem.Name = "regitreraKontoToolStripMenuItem";
-            this.regitreraKontoToolStripMenuItem.Size = new System.Drawing.Size(95, 19);
+            this.regitreraKontoToolStripMenuItem.Size = new System.Drawing.Size(115, 19);
             this.regitreraKontoToolStripMenuItem.Text = "Regitrera konto";
             this.regitreraKontoToolStripMenuItem.Click += new System.EventHandler(this.regitreraKontoToolStripMenuItem_Click);
             // 
@@ -424,6 +426,13 @@
             this.lblTotalValuta.Text = "Kr";
             this.lblTotalValuta.Visible = false;
             // 
+            // uppdateraToolStripMenuItem
+            // 
+            this.uppdateraToolStripMenuItem.Name = "uppdateraToolStripMenuItem";
+            this.uppdateraToolStripMenuItem.Size = new System.Drawing.Size(115, 19);
+            this.uppdateraToolStripMenuItem.Text = "Uppdatera";
+            this.uppdateraToolStripMenuItem.Click += new System.EventHandler(this.uppdateraToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -508,6 +517,7 @@
         private System.Windows.Forms.Label lblStartValuta;
         private System.Windows.Forms.Label lblSlutValuta;
         private System.Windows.Forms.Label lblTotalValuta;
+        private System.Windows.Forms.ToolStripMenuItem uppdateraToolStripMenuItem;
     }
 }
 

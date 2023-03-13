@@ -29,7 +29,7 @@ namespace OOAnalysOODesign
             string server = "localhost";
             string database = "bussappDB";
             string user = "root";
-            string password = "!Phuglife9835";
+            string password = "EttSuperHemligtLösenord123!";
 
             string connString = $"SERVER={server};DATABASE={database};UID={user};PASSWORD={password};";
 
@@ -68,6 +68,8 @@ namespace OOAnalysOODesign
 
         private void getStopsfromDB()
         {
+            // Denna metoden hämtar alla stoppen från databasen.
+
             string sqlQuery = "SELECT * FROM bussappdb.hållplatser;";
 
             MySqlCommand cmd = new MySqlCommand(sqlQuery, conn);
@@ -87,10 +89,9 @@ namespace OOAnalysOODesign
                         string hållplatsnamn = reader.GetString(1);
                         string hållplatszon = reader.GetString(2);
 
-
+                        // Lägger in alla hållplatser tillsammans med hållplatsenszon i en lista i klassen Hållplats
                         Hållplats.hållplatser.Add(new Hållplats(hållplatsnamn, hållplatszon));
 
-                        //MessageBox.Show($"{hållplatsnamn} {hållplatszon}");
                     }
 
                 conn.Close();
@@ -103,6 +104,9 @@ namespace OOAnalysOODesign
 
         private void getPriceFromDB()
         {
+
+            // Denna metoden hämtar priset för hållplatserna och stoppar in det i ett par labels.
+
             string sqlQuery = "SELECT * FROM bussappdb.pristabell;";
 
             MySqlCommand cmd = new MySqlCommand(sqlQuery, conn);
@@ -136,15 +140,20 @@ namespace OOAnalysOODesign
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // När applikationen startar så exekveras dessa metoderna som hämtar stoppen och prisen från databasen.
+
             getStopsfromDB();
             getPriceFromDB();
         }
 
         private void cbHållplats1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            // Använder combobox för att välja hållplats. Den uppdateras efter varje val och det valda värdet uppdateras in i en label för förtydligande.
+
             lblStartHållplats.Text = cbHållplats1.SelectedItem.ToString();
             lblStartHållplats.Show();
 
+            // Använder en foreach loop för att hämta hållplatsens zon och lägger det värdet i en label.
             foreach (Hållplats hållplater in Hållplats.hållplatser)
             {
                 if(hållplater.hållplatsNamn == lblStartHållplats.Text)
@@ -172,21 +181,26 @@ namespace OOAnalysOODesign
                 }
             }
 
+            // Visar ett par labels till
             lblStartZonfast.Show();
             lblStartZon.Show();
             lblStartPris.Show();
             lblZonPrisStart.Show();
             lblStartValuta.Show();
 
+            // Kallar på checkOut metoden.
             checkOut();
 
         }
 
         private void cbHållplats2_SelectedIndexChanged(object sender, EventArgs e)
         {
+            // Använder combobox för att välja hållplats. Den uppdateras efter varje val och det valda värdet uppdateras in i en label för förtydligande.
+
             lblSlutHållplats.Text = cbHållplats2.SelectedItem.ToString();
             lblSlutHållplats.Show();
 
+            // Använder en foreach loop för att hämta hållplatsens zon och lägger det värdet i en label.
             foreach (Hållplats hållplatser in Hållplats.hållplatser)
             {
                 if (hållplatser.hållplatsNamn == lblSlutHållplats.Text)
@@ -215,30 +229,37 @@ namespace OOAnalysOODesign
                 }
             }
 
+            // Visar ett par labels till
             lblSlutZonfast.Show();
             lblSlutZon.Show();
             lblSlutPris.Show();
             lblZonPrisSlut.Show();
             lblSlutValuta.Show();
 
+            // Kallar på checkOut metoden. 
             checkOut();
 
         }
 
         private void checkOut()
         {
-
+            // Detta är checkout metoden som kollar priset för den valda resan. 
             
 
             if (lblSlutPris.Visible == true && lblStartPris.Visible == true)
             {
+                // Konverterar priset för resan till int så att det kan läggas ihop.
+
                 int pris1 = Convert.ToInt32(lblZonPrisStart.Text);
                 int pris2 = Convert.ToInt32(lblZonPrisSlut.Text);
 
                 if(pris1 == pris2)
                 {
+                    // Om resan är inom samma zon så ska man bara betala för resan inom zonen. 
+
                     lblTotalPris.Text = $"{pris1}";
 
+                    // Tar bort dessa labels för att förhindra missförstånd för användaren. 
                     lblSlutZonfast.Visible = false;
                     lblSlutZon.Visible = false;
                     lblSlutPris.Visible = false;
@@ -257,9 +278,20 @@ namespace OOAnalysOODesign
 
         private void btnKöp_Click(object sender, EventArgs e)
         {
-
+            // Knapp för att bekräfta köpet. 
             string pris = lblTotalPris.Text;
             MessageBox.Show($"Köpet har genomförts. {pris} kr har dragits från ditt konto.");
+        }
+
+        
+        private void uppdateraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // En metod för att kunna uppdatera utan att starta om applikationen ifall något skulle ändras i databasen.
+
+            cbHållplats1.Items.Clear();
+            cbHållplats2.Items.Clear();
+            getStopsfromDB();
+            getPriceFromDB();
         }
     }
 }
