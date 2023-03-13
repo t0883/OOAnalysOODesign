@@ -29,7 +29,7 @@ namespace OOAnalysOODesign
             string server = "localhost";
             string database = "bussappDB";
             string user = "root";
-            string password = "";
+            string password = "!Phuglife9835";
 
             string connString = $"SERVER={server};DATABASE={database};UID={user};PASSWORD={password};";
 
@@ -227,6 +227,9 @@ namespace OOAnalysOODesign
 
         private void checkOut()
         {
+
+            
+
             if (lblSlutPris.Visible == true && lblStartPris.Visible == true)
             {
                 int pris1 = Convert.ToInt32(lblZonPrisStart.Text);
@@ -235,12 +238,16 @@ namespace OOAnalysOODesign
                 if(pris1 == pris2)
                 {
                     lblTotalPris.Text = $"{pris1}";
+
+                    lblSlutZonfast.Visible = false;
+                    lblSlutZon.Visible = false;
+                    lblSlutPris.Visible = false;
+                    lblZonPrisSlut.Visible = false;
+                    lblSlutValuta.Visible = false;
                 }
                 else { lblTotalPris.Text = $"{pris1 + pris2}"; }
 
                 
-
-
                 btnKöp.Show();
                 lblBiljettpris.Show();
                 lblTotalPris.Show();
