@@ -24,8 +24,11 @@ namespace OOAnalysOODesign
 
         private void btnLoggaIn_Click(object sender, EventArgs e)
         {
+            //Validerar så att det finns något i textfälten.
+
             bool valid = true;
 
+            // Loopar igenom textfälten för att kolla inputen från användaren.
             foreach (TextBox box in txtBoxes)
             {
                 box.Text = box.Text.Trim();
@@ -39,13 +42,15 @@ namespace OOAnalysOODesign
                 }
             }
 
+            // Om valid inte är true så kommer användaren informeras om att fylla i ett korrekt användarnamn och lösenord samt att metoden för btnLoggaIn_Click avslutas.
             if (!valid)
             {
                 MessageBox.Show("Vänligen fyll i ett korrekt användarnamn och lösenord!");
                 return;
             }
-            MessageBox.Show("Du är nu inloggad.");
 
+            // Om valid är true så informeras användaren och boxarna töms från sitt innehåll och ändrar färgen till vit.
+            MessageBox.Show("Du är nu inloggad.");
 
             foreach (TextBox box in txtBoxes)
             {
