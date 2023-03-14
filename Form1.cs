@@ -150,6 +150,8 @@ namespace OOAnalysOODesign
         {
             // Använder combobox för att välja hållplats. Den uppdateras efter varje val och det valda värdet uppdateras in i en label för förtydligande.
 
+            if(cbHållplats1.SelectedItem== null) { return; }
+
             lblStartHållplats.Text = cbHållplats1.SelectedItem.ToString();
             lblStartHållplats.Show();
 
@@ -196,6 +198,8 @@ namespace OOAnalysOODesign
         private void cbHållplats2_SelectedIndexChanged(object sender, EventArgs e)
         {
             // Använder combobox för att välja hållplats. Den uppdateras efter varje val och det valda värdet uppdateras in i en label för förtydligande.
+
+            if (cbHållplats2.SelectedItem == null) { return; }
 
             lblSlutHållplats.Text = cbHållplats2.SelectedItem.ToString();
             lblSlutHållplats.Show();
@@ -280,7 +284,54 @@ namespace OOAnalysOODesign
         {
             // Knapp för att bekräfta köpet. 
             string pris = lblTotalPris.Text;
-            MessageBox.Show($"Köpet har genomförts. {pris} kr har dragits från ditt konto.");
+            DialogResult result1 = MessageBox.Show($"Vill du köpa en biljett för {pris} kr?", "", MessageBoxButtons.YesNo);
+
+            if(result1 == DialogResult.No) 
+            {
+                cbHållplats1.SelectedItem = null;
+                cbHållplats2.SelectedItem = null;
+
+                btnKöp.Hide();
+                lblBiljettpris.Hide();
+                lblTotalPris.Hide();
+                lblTotalValuta.Hide();
+                lblSlutZonfast.Hide();
+                lblSlutZon.Hide();
+                lblSlutPris.Hide();
+                lblZonPrisSlut.Hide();
+                lblSlutValuta.Hide();
+                lblStartZonfast.Hide();
+                lblStartZon.Hide();
+                lblStartPris.Hide();
+                lblZonPrisStart.Hide();
+                lblStartValuta.Hide();
+                lblSlutHållplats.Hide();
+                lblStartHållplats.Hide();
+            }
+
+            if (result1 == DialogResult.Yes)
+            {
+                cbHållplats1.SelectedItem = null;
+                cbHållplats2.SelectedItem = null;
+
+                btnKöp.Hide();
+                lblBiljettpris.Hide();
+                lblTotalPris.Hide();
+                lblTotalValuta.Hide();
+                lblSlutZonfast.Hide();
+                lblSlutZon.Hide();
+                lblSlutPris.Hide();
+                lblZonPrisSlut.Hide();
+                lblSlutValuta.Hide();
+                lblStartZonfast.Hide();
+                lblStartZon.Hide();
+                lblStartPris.Hide();
+                lblZonPrisStart.Hide();
+                lblStartValuta.Hide();
+                lblSlutHållplats.Hide();
+                lblStartHållplats.Hide();
+            }
+
         }
 
         
