@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using Microsoft.VisualBasic;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -284,52 +285,29 @@ namespace OOAnalysOODesign
         {
             // Knapp för att bekräfta köpet. 
             string pris = lblTotalPris.Text;
-            DialogResult result1 = MessageBox.Show($"Vill du köpa en biljett för {pris} kr?", "", MessageBoxButtons.YesNo);
+            DialogResult result1 = MessageBox.Show($"Vill du köpa en biljett för {pris} kr för en resa från {lblStartHållplats.Text} till {lblSlutHållplats.Text}?", "", MessageBoxButtons.YesNo);
 
             if(result1 == DialogResult.No) 
             {
                 cbHållplats1.SelectedItem = null;
                 cbHållplats2.SelectedItem = null;
 
-                btnKöp.Hide();
-                lblBiljettpris.Hide();
-                lblTotalPris.Hide();
-                lblTotalValuta.Hide();
-                lblSlutZonfast.Hide();
-                lblSlutZon.Hide();
-                lblSlutPris.Hide();
-                lblZonPrisSlut.Hide();
-                lblSlutValuta.Hide();
-                lblStartZonfast.Hide();
-                lblStartZon.Hide();
-                lblStartPris.Hide();
-                lblZonPrisStart.Hide();
-                lblStartValuta.Hide();
-                lblSlutHållplats.Hide();
-                lblStartHållplats.Hide();
+                hideLabels();
             }
 
             if (result1 == DialogResult.Yes)
             {
+                string email = Interaction.InputBox("Vänligen fyll i din epostadress här:", "Bekräfta köp");
+
+                if(email != "")
+                {
+                    MessageBox.Show("Tack för ditt köp! Din biljett kommer snart till din epost adress!");
+                }
+
                 cbHållplats1.SelectedItem = null;
                 cbHållplats2.SelectedItem = null;
 
-                btnKöp.Hide();
-                lblBiljettpris.Hide();
-                lblTotalPris.Hide();
-                lblTotalValuta.Hide();
-                lblSlutZonfast.Hide();
-                lblSlutZon.Hide();
-                lblSlutPris.Hide();
-                lblZonPrisSlut.Hide();
-                lblSlutValuta.Hide();
-                lblStartZonfast.Hide();
-                lblStartZon.Hide();
-                lblStartPris.Hide();
-                lblZonPrisStart.Hide();
-                lblStartValuta.Hide();
-                lblSlutHållplats.Hide();
-                lblStartHållplats.Hide();
+                hideLabels();
             }
 
         }
@@ -343,6 +321,26 @@ namespace OOAnalysOODesign
             cbHållplats2.Items.Clear();
             getStopsfromDB();
             getPriceFromDB();
+        }
+
+        private void hideLabels()
+        {
+            btnKöp.Hide();
+            lblBiljettpris.Hide();
+            lblTotalPris.Hide();
+            lblTotalValuta.Hide();
+            lblSlutZonfast.Hide();
+            lblSlutZon.Hide();
+            lblSlutPris.Hide();
+            lblZonPrisSlut.Hide();
+            lblSlutValuta.Hide();
+            lblStartZonfast.Hide();
+            lblStartZon.Hide();
+            lblStartPris.Hide();
+            lblZonPrisStart.Hide();
+            lblStartValuta.Hide();
+            lblSlutHållplats.Hide();
+            lblStartHållplats.Hide();
         }
     }
 }
