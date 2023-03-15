@@ -85,6 +85,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Database.cs" />
     <Compile Include="Huvudmeny.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -25,7 +25,7 @@ namespace OOAnalysOODesign
         public Huvudmeny()
         {
             InitializeComponent();
-
+            /*
             //Skapa en MySQL connection objekt
             string server = "localhost";
             string database = "bussappDB";
@@ -35,41 +35,44 @@ namespace OOAnalysOODesign
             string connString = $"SERVER={server};DATABASE={database};UID={user};PASSWORD={password};";
 
             conn = new MySqlConnection(connString);
+            */
 
             comboBoxes = new ComboBox[] { cbHållplats1, cbHållplats2 };
         }
 
         private void tidtabelToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Tidtabell form2 = new Tidtabell();
+            Tidtabell tidtabell = new Tidtabell();
 
-            form2.Show();
+            tidtabell.Show();
         }
 
         private void biljettprisToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Prislista form3 = new Prislista();
+            Prislista prislista = new Prislista();
 
-            form3.Show();
+            prislista.Show();
         }
 
         private void loggaInToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            LoggaIn form4 = new LoggaIn();
+            LoggaIn loggaIn = new LoggaIn();
 
-            form4.Show();
+            loggaIn.Show();
         }
 
         private void regitreraKontoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            RegistreraKonto form5 = new RegistreraKonto();
+            RegistreraKonto registreraKonto = new RegistreraKonto();
 
-            form5.Show();
+            registreraKonto.Show();
         }
 
         private void getStopsfromDB()
         {
             // Denna metoden hämtar alla stoppen från databasen.
+
+            Database database = new Database();
 
             string sqlQuery = "SELECT * FROM bussappdb.hållplatser;";
 
@@ -77,7 +80,7 @@ namespace OOAnalysOODesign
 
             try
             {
-                conn.Open();
+                database.OpenConnection();
 
                 MySqlDataReader reader = cmd.ExecuteReader();
 
@@ -95,7 +98,7 @@ namespace OOAnalysOODesign
 
                     }
 
-                conn.Close();
+                database.CloseConnection();
             }
             catch(Exception e)
             {
@@ -103,8 +106,12 @@ namespace OOAnalysOODesign
             }
         }
 
+
+
         private void getPriceFromDB()
         {
+
+            Database database = new Database();
 
             // Denna metoden hämtar priset för hållplatserna och stoppar in det i ett par labels.
 
@@ -114,7 +121,7 @@ namespace OOAnalysOODesign
 
             try
             {
-                conn.Open();
+                database.OpenConnection();
 
                 MySqlDataReader reader = cmd.ExecuteReader();
 
@@ -130,7 +137,7 @@ namespace OOAnalysOODesign
 
                 }
                 
-                conn.Close();
+                database.CloseConnection();
 
             }
             catch (Exception e)
