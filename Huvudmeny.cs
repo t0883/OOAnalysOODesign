@@ -14,9 +14,7 @@ namespace OOAnalysOODesign
 {
     public partial class Huvudmeny : Form
     {
-        MySqlConnection conn;
-
-
+        
         private ComboBox[] comboBoxes;
 
         int ZonA;
@@ -26,22 +24,7 @@ namespace OOAnalysOODesign
         public Huvudmeny()
         {
             InitializeComponent();
-            /*
-            //Skapa en MySQL connection objekt
-            string server = "localhost";
-            string database = "bussappDB";
-            string user = "root";
-            string password = "EttSuperHemligtLösenord123!";
-
-            string connString = $"SERVER={server};DATABASE={database};UID={user};PASSWORD={password};";
-
-            conn = new MySqlConnection(connString);
-            */
-
-            Database database = new Database();
-
-            conn = database.GetConnection();
-
+            
             comboBoxes = new ComboBox[] { cbHållplats1, cbHållplats2 };
         }
 
@@ -73,7 +56,7 @@ namespace OOAnalysOODesign
             registreraKonto.Show();
         }
 
-        private void getStopsfromDB()
+        private void GetStopsfromDB()
         {
             // Denna metoden hämtar alla stoppen från databasen.
 
@@ -115,7 +98,7 @@ namespace OOAnalysOODesign
 
 
 
-        private void getPriceFromDB()
+        private void GetPriceFromDB()
         {
 
             Database database = new Database();
@@ -160,8 +143,8 @@ namespace OOAnalysOODesign
         {
             // När applikationen startar så exekveras dessa metoderna som hämtar stoppen och prisen från databasen.
 
-            getStopsfromDB();
-            getPriceFromDB();
+            GetStopsfromDB();
+            GetPriceFromDB();
         }
 
         private void cbHållplats1_SelectedIndexChanged(object sender, EventArgs e)
@@ -336,8 +319,8 @@ namespace OOAnalysOODesign
 
             cbHållplats1.Items.Clear();
             cbHållplats2.Items.Clear();
-            getStopsfromDB();
-            getPriceFromDB();
+            GetStopsfromDB();
+            GetPriceFromDB();
         }
 
         private void hideLabels()

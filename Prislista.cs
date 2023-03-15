@@ -14,8 +14,7 @@ namespace OOAnalysOODesign
 {
     public partial class Prislista : Form
     {
-        MySqlConnection conn;
-
+        
         int ZonApris;
         int ZonBpris;
         int ZonCpris;
@@ -24,21 +23,16 @@ namespace OOAnalysOODesign
         public Prislista()
         {
             InitializeComponent();
-
-            Database database = new Database();
-
-            conn = database.GetConnection();
-
         }
 
         private void Form3_Load(object sender, EventArgs e)
         {
             // Hämtar prisen från databasen
 
-            getPriceFromDB();
+            GetPriceFromDB();
         }
 
-        private void getPriceFromDB()
+        private void GetPriceFromDB()
         {
             Database database = new Database();
 
