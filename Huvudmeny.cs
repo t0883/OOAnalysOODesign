@@ -16,6 +16,7 @@ namespace OOAnalysOODesign
     {
         MySqlConnection conn;
 
+
         private ComboBox[] comboBoxes;
 
         int ZonA;
@@ -36,6 +37,10 @@ namespace OOAnalysOODesign
 
             conn = new MySqlConnection(connString);
             */
+
+            Database database = new Database();
+
+            conn = database.GetConnection();
 
             comboBoxes = new ComboBox[] { cbHållplats1, cbHållplats2 };
         }
@@ -76,11 +81,13 @@ namespace OOAnalysOODesign
 
             string sqlQuery = "SELECT * FROM bussappdb.hållplatser;";
 
-            MySqlCommand cmd = new MySqlCommand(sqlQuery, conn);
-
             try
             {
                 database.OpenConnection();
+
+                MySqlConnection conn = database.GetConnection();
+
+                MySqlCommand cmd = new MySqlCommand(sqlQuery, conn);
 
                 MySqlDataReader reader = cmd.ExecuteReader();
 
@@ -117,11 +124,14 @@ namespace OOAnalysOODesign
 
             string sqlQuery = "SELECT * FROM bussappdb.pristabell;";
 
-            MySqlCommand cmd = new MySqlCommand(sqlQuery, conn);
-
             try
             {
+
                 database.OpenConnection();
+
+                MySqlConnection conn = database.GetConnection();
+
+                MySqlCommand cmd = new MySqlCommand(sqlQuery, conn);
 
                 MySqlDataReader reader = cmd.ExecuteReader();
 

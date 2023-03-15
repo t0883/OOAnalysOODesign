@@ -36,6 +36,11 @@ namespace OOAnalysOODesign
         }
         
 
+        public MySqlConnection GetConnection()
+        {
+            return conn;
+        }
+
         public bool OpenConnection()
         {
             try

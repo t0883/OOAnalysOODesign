@@ -25,15 +25,10 @@ namespace OOAnalysOODesign
         {
             InitializeComponent();
 
-            //Skapa en MySQL connection objekt
-            string server = "localhost";
-            string database = "bussappDB";
-            string user = "root";
-            string password = "EttSuperHemligtLösenord123!";
+            Database database = new Database();
 
-            string connString = $"SERVER={server};DATABASE={database};UID={user};PASSWORD={password};";
+            conn = database.GetConnection();
 
-            conn = new MySqlConnection(connString);
         }
 
         private void Form3_Load(object sender, EventArgs e)
@@ -45,13 +40,19 @@ namespace OOAnalysOODesign
 
         private void getPriceFromDB()
         {
+            Database database = new Database();
+
             string sqlQuery = "SELECT * FROM bussappdb.pristabell;";
 
-            MySqlCommand cmd = new MySqlCommand(sqlQuery, conn);
 
             try
             {
-                conn.Open();
+
+                database.OpenConnection();
+
+                MySqlConnection conn = database.GetConnection();
+
+                MySqlCommand cmd = new MySqlCommand(sqlQuery, conn);
 
                 MySqlDataReader reader = cmd.ExecuteReader();
 
@@ -68,7 +69,6 @@ namespace OOAnalysOODesign
                     lblZonABpris.Text = $"{(ZonApris + ZonBpris)} kr";
                     lblZonBCpris.Text = $"{(ZonBpris + ZonCpris)} kr";
                     lblZonACpris.Text = $"{(ZonApris + ZonCpris)} kr";
-
 
                 }
 
