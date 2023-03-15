@@ -1,6 +1,6 @@
 ﻿namespace OOAnalysOODesign
 {
-    partial class Form5
+    partial class RegistreraKonto
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form5));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistreraKonto));
             this.label1 = new System.Windows.Forms.Label();
             this.txtSkapaAnvändarnamn = new System.Windows.Forms.TextBox();
             this.txtSkapaLösenord = new System.Windows.Forms.TextBox();

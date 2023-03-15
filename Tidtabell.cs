@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace OOAnalysOODesign
 {
-    public partial class Form2 : Form
+    public partial class Tidtabell : Form
     {
-        public Form2()
+        public Tidtabell()
         {
             InitializeComponent();
         }

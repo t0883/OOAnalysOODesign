@@ -1,6 +1,6 @@
 ﻿namespace OOAnalysOODesign
 {
-    partial class Form4
+    partial class LoggaIn
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form4));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoggaIn));
             this.label1 = new System.Windows.Forms.Label();
             this.txtAnvändarnamn = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();

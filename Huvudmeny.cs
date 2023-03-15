@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace OOAnalysOODesign
 {
-    public partial class Form1 : Form
+    public partial class Huvudmeny : Form
     {
         MySqlConnection conn;
 
@@ -22,7 +22,7 @@ namespace OOAnalysOODesign
         int ZonB;
         int ZonC;
 
-        public Form1()
+        public Huvudmeny()
         {
             InitializeComponent();
 
@@ -41,28 +41,28 @@ namespace OOAnalysOODesign
 
         private void tidtabelToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form2 form2 = new Form2();
+            Tidtabell form2 = new Tidtabell();
 
             form2.Show();
         }
 
         private void biljettprisToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form3 form3 = new Form3();
+            Prislista form3 = new Prislista();
 
             form3.Show();
         }
 
         private void loggaInToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form4 form4 = new Form4();
+            LoggaIn form4 = new LoggaIn();
 
             form4.Show();
         }
 
         private void regitreraKontoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form5 form5 = new Form5();
+            RegistreraKonto form5 = new RegistreraKonto();
 
             form5.Show();
         }

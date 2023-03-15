@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace OOAnalysOODesign
 {
-    public partial class Form3 : Form
+    public partial class Prislista : Form
     {
         MySqlConnection conn;
 
@@ -21,7 +21,7 @@ namespace OOAnalysOODesign
         int ZonCpris;
 
 
-        public Form3()
+        public Prislista()
         {
             InitializeComponent();
 

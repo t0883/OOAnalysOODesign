@@ -10,19 +10,18 @@ using System.Windows.Forms;
 
 namespace OOAnalysOODesign
 {
-
-    public partial class Form4 : Form
+    public partial class RegistreraKonto : Form
     {
-
         TextBox[] txtBoxes;
-        public Form4()
+
+        public RegistreraKonto()
         {
             InitializeComponent();
 
-            txtBoxes = new TextBox[] { txtAnvändarnamn, txtLösenord };
+            txtBoxes = new TextBox[] { txtSkapaAnvändarnamn, txtSkapaLösenord };
         }
 
-        private void btnLoggaIn_Click(object sender, EventArgs e)
+        private void btnRegistreraHär_Click(object sender, EventArgs e)
         {
             //Validerar så att det finns något i textfälten.
 
@@ -33,7 +32,7 @@ namespace OOAnalysOODesign
             {
                 box.Text = box.Text.Trim();
 
-                if (box.Text == "")
+                if(box.Text == "")
                 {
                     valid = false;
 
@@ -42,21 +41,23 @@ namespace OOAnalysOODesign
                 }
             }
 
-            // Om valid inte är true så kommer användaren informeras om att fylla i ett korrekt användarnamn och lösenord samt att metoden för btnLoggaIn_Click avslutas.
+            // Om valid inte är true så kommer användaren informeras om att fylla i ett korrekt användarnamn och lösenord samt att metoden för btnRegistreraHär_Click avslutas.
             if (!valid)
             {
                 MessageBox.Show("Vänligen fyll i ett korrekt användarnamn och lösenord!");
                 return;
             }
+                MessageBox.Show("Ditt konto har registrerats.");
 
             // Om valid är true så informeras användaren och boxarna töms från sitt innehåll och ändrar färgen till vit.
-            MessageBox.Show("Du är nu inloggad.");
-
             foreach (TextBox box in txtBoxes)
             {
                 box.Clear();
                 box.BackColor = Color.White;
             }
+                
+                
         }
+
     }
 }
