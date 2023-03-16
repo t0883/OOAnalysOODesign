@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -301,7 +302,38 @@ namespace OOAnalysOODesign
 
                 if(email != "")
                 {
-                    MessageBox.Show("Tack för ditt köp! Din biljett kommer snart till din epost adress!");
+                    try
+                    {
+                        MailMessage mailMessage = new MailMessage();
+
+                        SmtpClient client = new SmtpClient("smtp.gmail.com");
+
+                        mailMessage.From = new MailAddress("tumskruven@gmail.com", "BussAB");
+
+                        mailMessage.To.Add(email);
+
+                        mailMessage.Subject = "Kvitto BussAB";
+
+                        mailMessage.IsBodyHtml = true;
+
+                        mailMessage.Body = $"<h1>Kvitto för resan mellan {lblStartHållplats.Text} till {lblSlutHållplats.Text}</h1>";
+
+                        client.EnableSsl = true;
+
+                        client.Port = 587;
+
+                        client.Credentials = new System.Net.NetworkCredential("tumskruven@gmail.com", "hzdezgwpgguzbvrb");
+
+                        client.Send(mailMessage);
+
+
+                        MessageBox.Show("Tack för ditt köp! Din biljett kommer snart till din epost adress!");
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
                 }
 
                 cbHållplats1.SelectedItem = null;
